@@ -12,7 +12,7 @@
       "title": "Youtube Celebrate",
       "description": "Celebrates whenever you get a new subscriber with a confetti 🎉",
       "mode": "menu-bar",
-      "interval": "5s"
+      "interval": "1m"
     }
   ],
   "preferences": [

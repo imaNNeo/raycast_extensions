@@ -53,7 +53,7 @@ export default function Command() {
   LocalStorage.setItem("subscribers-count", count);
   return (
     <MenuBarExtra icon={Icon.TwoPeople} title={countStr} isLoading={isLoading} >
-      <MenuBarExtra.Item title="Open in YouTube Studio" onAction={() => open(`https://studio.youtube.com/channel/${CHANNEL_ID}`)} />
+      <MenuBarExtra.Item title="Open in YouTube Studio" onAction={() => open(`https://studio.youtube.com/channel/${youtubeChannelId}`)} />
     </MenuBarExtra>
   );
 }
