@@ -2,14 +2,14 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "youtube-celebrate",
   "title": "Youtube Celebrate",
-  "description": "",
+  "description": "Celebrates whenever you get a new subscriber with a confetti 🎉",
   "icon": "command-icon.png",
   "author": "iman_neo",
   "license": "MIT",
   "commands": [
     {
       "name": "index",
-      "title": "Youtube Celebrate",
+      "title": "Start Youtube Celebrate",
       "description": "Celebrates whenever you get a new subscriber with a confetti 🎉",
       "mode": "menu-bar",
       "interval": "1m"
