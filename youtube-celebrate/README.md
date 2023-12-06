@@ -45,6 +45,9 @@ For support, issue reporting, or feature requests, please open an issue in this 
 
 Contributions are welcome! Feel free to fork this repository and submit pull requests with your enhancements.
 
+## Assets
+Logo is created using [raycast logo generator](https://icon.ray.so/) tool, you can find the exact logo using [this link](https://icon.ray.so/?fileName=extension_icon&icon=add-person&backgroundRadius=128&backgroundStrokeSize=0&backgroundStrokeColor=%23FFFFFF&backgroundRadialGlare=true&backgroundNoiseTexture=false&backgroundNoiseTextureOpacity=25&backgroundStrokeOpacity=100&iconColor=%23FFFFFF&iconSize=352&selectedPresetIndex=null&customSvg=undefined&backgroundFillType=Solid&backgroundStartColor=%23860000&backgroundEndColor=%23FF0000&backgroundAngle=45)
+
 ## License
 
 This project is released under the MIT License - see the LICENSE.md file for details.
