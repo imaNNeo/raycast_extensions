@@ -34,7 +34,7 @@ export default function Command() {
   console.log(youtubeApiKey);
   console.log(youtubeChannelId);
   const { data, isLoading } = useFetch<Data>(
-    `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeChannelId}&key=${youtubeApiKey}`
+    `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeChannelId}&key=${youtubeApiKey}`,
   );
   if (!data || data.items.length === 0) {
     return <MenuBarExtra isLoading={isLoading} />;
@@ -43,7 +43,7 @@ export default function Command() {
   const countStr = Number(count).toLocaleString();
   LocalStorage.getItem<number>("subscribers-count").then((latestCount) => {
     const diff = count - (latestCount ?? 0);
-    if (diff == 0) {
+    if (diff <= 0) {
       console.log("No change in subscriber count");
       return;
     }
@@ -52,8 +52,11 @@ export default function Command() {
 
   LocalStorage.setItem("subscribers-count", count);
   return (
-    <MenuBarExtra icon={Icon.TwoPeople} title={countStr} isLoading={isLoading} >
-      <MenuBarExtra.Item title="Open in YouTube Studio" onAction={() => open(`https://studio.youtube.com/channel/${youtubeChannelId}`)} />
+    <MenuBarExtra icon={Icon.TwoPeople} title={countStr} isLoading={isLoading}>
+      <MenuBarExtra.Item
+        title="Open in YouTube Studio"
+        onAction={() => open(`https://studio.youtube.com/channel/${youtubeChannelId}`)}
+      />
     </MenuBarExtra>
   );
 }
