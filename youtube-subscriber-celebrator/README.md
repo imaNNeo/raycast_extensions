@@ -1,6 +1,6 @@
 # YouTube Event Celebrator - Raycast Extension
 
-![YouTube Event Celebrator Logo](https://github.com/imaNNeo/raycast_extensions/blob/main/youtube-celebrate/assets/command-icon.png?raw=true)
+![YouTube Event Celebrator Logo](https://github.com/imaNNeo/raycast_extensions/blob/main/youtube-subscriber-celebrator/assets/command-icon.png?raw=true)
 
 ## Description
 
