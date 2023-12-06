@@ -1,20 +1,25 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "youtube-celebrate",
-  "title": "Youtube Celebrate",
+  "name": "youtube-subscriber-celebrator",
+  "title": "YouTube Subscriber Celebrator",
   "description": "Celebrates whenever you get a new subscriber with a confetti 🎉",
   "icon": "command-icon.png",
   "author": "iman_neo",
   "license": "MIT",
+  "version": "1.0.0",
   "commands": [
     {
       "name": "index",
-      "title": "Start Youtube Celebrate",
+      "title": "Start Youtube Subscriber Celebrator",
       "description": "Celebrates whenever you get a new subscriber with a confetti 🎉",
       "mode": "menu-bar",
       "interval": "1m"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imaNNeo/raycast_extensions/tree/main/youtube-celebrate"
+  },
   "preferences": [
     {
       "name": "youtubeApiKey",
