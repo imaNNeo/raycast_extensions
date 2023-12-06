@@ -10,8 +10,8 @@
   "commands": [
     {
       "name": "index",
-      "title": "Start Youtube Subscriber Celebrator",
-      "description": "Celebrates whenever you get a new subscriber with a confetti 🎉",
+      "title": "Start YouTube Subscriber Celebrator",
+      "description": "Automatically celebrates whenever you get a new subscriber with a confetti 🎉",
       "mode": "menu-bar",
       "interval": "1m"
     }
