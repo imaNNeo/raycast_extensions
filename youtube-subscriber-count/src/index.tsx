@@ -19,7 +19,6 @@ export default function Command() {
   const youtubeChannelId = preferences.youtubeChannelId;
   const celebrationThreshold = preferences.celebrationThreshold;
 
-  /// Check if celebrationThreshold is not a number, throw error
   if (isNaN(celebrationThreshold)) {
     const markdown = "Celebration subscribers threshold is not a number. Please update it in extension preferences and try again.";
 
