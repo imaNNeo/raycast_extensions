@@ -49,7 +49,7 @@ export default function Command() {
       />
     );
   }
-  const { data, isLoading } = useFetch(
+  const { data, isLoading } = useFetch<Data>(
     `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeChannelId}&key=${youtubeApiKey}`,
   );
   if (!data || data.items.length === 0) {
