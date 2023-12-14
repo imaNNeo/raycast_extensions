@@ -20,7 +20,8 @@ export default function Command() {
   const celebrationThreshold = preferences.celebrationThreshold;
 
   if (isNaN(celebrationThreshold)) {
-    const markdown = "Celebration subscribers threshold is not a number. Please update it in extension preferences and try again.";
+    const markdown =
+      "Celebration subscribers threshold is not a number. Please update it in extension preferences and try again.";
 
     return (
       <Detail
@@ -62,7 +63,6 @@ export default function Command() {
       if (diff < celebrationThreshold) {
         console.log("Threshold not reached yet");
         return;
-        
       }
       open("raycast://extensions/raycast/raycast/confetti");
       LocalStorage.setItem("celebrated-at-count", currentCount);
