@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "youtube-subscriber-celebrator",
-  "title": "YouTube Subscriber Celebrator",
+  "name": "youtube-subscriber-count",
+  "title": "YouTube Subscriber Count",
   "description": "Celebrates whenever you get a new subscriber with a confetti 🎉",
   "icon": "command-icon.png",
   "author": "iman_neo",
@@ -10,7 +10,7 @@
   "commands": [
     {
       "name": "index",
-      "title": "Start YouTube Subscriber Celebrator",
+      "title": "Start YouTube Subscriber Count",
       "description": "Automatically celebrates whenever you get a new subscriber with a confetti 🎉",
       "mode": "menu-bar",
       "interval": "1m"

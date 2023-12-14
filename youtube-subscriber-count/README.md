@@ -1,6 +1,6 @@
-# YouTube Subscriber Celebrator - Raycast Extension
+# YouTube Subscriber Count - Raycast Extension
 
-<img src="https://github.com/imaNNeo/raycast_extensions/blob/main/youtube-subscriber-celebrator/assets/command-icon.png?raw=true" alt="YouTube Subscriber Celebrator" width="200"/>
+<img src="https://github.com/imaNNeo/raycast_extensions/blob/main/youtube-subscriber-count/assets/command-icon.png?raw=true" alt="YouTube Subscriber Count" width="200"/>
 
 ## Description
 
@@ -13,7 +13,7 @@ To use this extension, you'll need a YouTube API key:
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
 2. Create a project and enable the YouTube Data API v3.
 3. Create an API key for your project.
-4. In Raycast preferences, locate the YouTube Subscriber Celebrator extension and input your YouTube API key.
+4. In Raycast preferences, locate the YouTube Subscriber Count extension and input your YouTube API key.
 5. Also you need the channel id. Follow [this guideline](https://support.google.com/youtube/answer/3250431?hl=en) to find your channel ID, it's something like `UCLtLg_CkuGBnf_-wUHnv6Nw`
 
 ## Usage
@@ -21,7 +21,7 @@ To use this extension, you'll need a YouTube API key:
 After installation and setup:
 
 - The extension will automatically display your current subscriber count.
-- When your channel reaches a new milestone, a celebratory alert (confetti burst) will appear (it checks every minute)
+- When your channel reaches a new milestone (with a customizable threshold), a celebratory alert (confetti burst) will appear (it checks with a customizable interval, for example every 1 minutes)
 - Access your YouTube dashboard or channel with a single click for more detailed analytics.
 
 ## Assets
