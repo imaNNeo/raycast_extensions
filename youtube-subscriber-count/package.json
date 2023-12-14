@@ -38,6 +38,16 @@
       "title": "YouTube Channel ID",
       "type": "textfield",
       "placeholder": "Enter your YouTube Channel ID (such as `UCLtLg_CkuGBnf_-wUHnv6Nw`)"
+    },
+    {
+      "name": "celebrationThreshold",
+      "description": "Celebration subscribers threshold. If you enter 10, it means when you get 10 subscribers it shows the celebration confetti (enter 0 to disable celebration)",
+      "required": true,
+      "default": "5",
+      "identifier": "celebrationThreshold",
+      "title": "Celebration subscribers threshold",
+      "type": "textfield",
+      "placeholder": "Enter your celebration subscribers threshold"
     }
   ],
   "dependencies": {

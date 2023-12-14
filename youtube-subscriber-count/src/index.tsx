@@ -17,6 +17,24 @@ export default function Command() {
   const preferences = getPreferenceValues();
   const youtubeApiKey = preferences.youtubeApiKey;
   const youtubeChannelId = preferences.youtubeChannelId;
+  const celebrationThreshold = preferences.celebrationThreshold;
+
+  /// Check if celebrationThreshold is not a number, throw error
+  if (isNaN(celebrationThreshold)) {
+    const markdown = "Celebration subscribers threshold is not a number. Please update it in extension preferences and try again.";
+
+    return (
+      <Detail
+        markdown={markdown}
+        actions={
+          <ActionPanel>
+            <Action title="Open Extension Preferences" onAction={openExtensionPreferences} />
+          </ActionPanel>
+        }
+      />
+    );
+  }
+
   if (youtubeApiKey === undefined || youtubeChannelId === undefined) {
     const markdown = "API key incorrect. Please update it in extension preferences and try again.";
 
@@ -31,26 +49,26 @@ export default function Command() {
       />
     );
   }
-  console.log(youtubeApiKey);
-  console.log(youtubeChannelId);
-  const { data, isLoading } = useFetch<Data>(
+  const { data, isLoading } = useFetch(
     `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeChannelId}&key=${youtubeApiKey}`,
   );
   if (!data || data.items.length === 0) {
     return <MenuBarExtra isLoading={isLoading} />;
   }
-  const count = Number(data.items[0].statistics.subscriberCount);
-  const countStr = Number(count).toLocaleString();
-  LocalStorage.getItem<number>("subscribers-count").then((latestCount) => {
-    const diff = count - (latestCount ?? 0);
-    if (diff <= 0) {
-      console.log("No change in subscriber count");
-      return;
-    }
-    open("raycast://extensions/raycast/raycast/confetti");
-  });
-
-  LocalStorage.setItem("subscribers-count", count);
+  const currentCount = Number(data.items[0].statistics.subscriberCount);
+  const countStr = Number(currentCount).toLocaleString();
+  if (celebrationThreshold != 0) {
+    LocalStorage.getItem<number>("celebrated-at-count").then((celebratedAtCount) => {
+      const diff = currentCount - (celebratedAtCount ?? 0);
+      if (diff < celebrationThreshold) {
+        console.log("Threshold not reached yet");
+        return;
+        
+      }
+      open("raycast://extensions/raycast/raycast/confetti");
+      LocalStorage.setItem("celebrated-at-count", currentCount);
+    });
+  }
   return (
     <MenuBarExtra icon={Icon.TwoPeople} title={countStr} isLoading={isLoading}>
       <MenuBarExtra.Item
