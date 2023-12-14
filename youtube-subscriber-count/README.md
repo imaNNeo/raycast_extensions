@@ -1,6 +1,6 @@
 # YouTube Subscriber Count - Raycast Extension
 
-<img src="https://github.com/imaNNeo/raycast_extensions/blob/main/youtube-subscriber-count/assets/command-icon.png?raw=true" alt="YouTube Subscriber Count" width="200"/>
+<img src="./assets/command-icon.png" alt="YouTube Subscriber Count" width="200"/>
 
 ## Description
 
